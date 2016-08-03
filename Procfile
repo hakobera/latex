@@ -1,1 +1,1 @@
-web: go-latex-server run -p=$PORT
+web: latex run -p=$PORT
