@@ -25,11 +25,13 @@ package main
 
 import (
 	"log"
+
 	"menteslibres.net/gosexy/cli"
 )
 
 func main() {
 	var err error
+	const Version = "0.1"
 
 	// Software properties.
 	cli.Name = "LaTeX Server"

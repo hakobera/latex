@@ -27,12 +27,13 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"menteslibres.net/api/latex"
-	"menteslibres.net/gosexy/cli"
 	"net"
 	"net/http"
 	"net/http/fcgi"
 	"strings"
+
+	"github.com/hakobera/latex"
+	"menteslibres.net/gosexy/cli"
 )
 
 // This command.

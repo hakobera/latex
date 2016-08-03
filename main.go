@@ -25,15 +25,15 @@ package latex
 
 import (
 	"bytes"
-	"crypto"
+	"crypto/sha1"
 	"errors"
 	"fmt"
 	"io"
-	"menteslibres.net/gosexy/checksum"
-	"menteslibres.net/gosexy/to"
 	"os"
 	"os/exec"
 	"path"
+
+	"menteslibres.net/gosexy/to"
 )
 
 const (
@@ -69,7 +69,8 @@ func New() *Renderer {
 func (self *Renderer) Render(latex string) (string, error) {
 	var err error
 
-	name := checksum.String(latex, crypto.SHA1)
+	data := []byte(latex)
+	name := fmt.Sprintf("%x", sha1.Sum(data))
 
 	// Relative output directory.
 	relPath := name[0:4] + PS + name[4:8] + PS + name[8:12] + PS + name[12:16] + PS + name[16:] + ".png"
