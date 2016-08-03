@@ -2,7 +2,14 @@
 	"ImportPath": "github.com/hakobera/latex",
 	"GoVersion": "go1.6",
 	"GodepVersion": "v60",
+	"Packages": [
+		"./..."
+	],
 	"Deps": [
+		{
+			"ImportPath": "menteslibres.net/gosexy/cli",
+			"Rev": "1e5b1f9057395f35c1a17f766e7f8cd4e1b7c6e2"
+		},
 		{
 			"ImportPath": "menteslibres.net/gosexy/to",
 			"Rev": "c20e083e31230b84ffa23c5d2fb0bc55f5292681"
